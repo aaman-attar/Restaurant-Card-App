@@ -33,7 +33,8 @@ function App() {
       {currentPage === 'menu' ? (
         <div className="restaurant-menu">
           <header className="menu-header">
-            <h1>Restaurant Menu</h1>
+            <h1 className="restaurant-name"><b>Man Murad</b></h1>
+            <h2 className="restaurant-subtitle"><i>Restaurant Menu Card</i></h2>
           </header>
           <Navigation 
             sections={Object.keys(menuData)} 

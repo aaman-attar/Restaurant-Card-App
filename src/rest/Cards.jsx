@@ -90,19 +90,20 @@ export default function Cards({ dish, onItemAdded }) {
                     </div>
                 </div>
                 
-                <div className="price-info">
-                    {formatPrice(dish.price)}
-                </div>
-
                 <div className="card-actions">
                     {!showPortionSelector ? (
-                        <button 
-                            className={`add-to-cart-btn ${isAdding ? 'adding' : ''} ${justAdded ? 'added' : ''}`}
-                            onClick={handleAddToCart}
-                            disabled={isAdding}
-                        >
-                            {isAdding ? 'Adding...' : justAdded ? '✓ Added!' : 'Add to Cart'}
-                        </button>
+                        <>
+                            <div className="price-info">
+                                {formatPrice(dish.price)}
+                            </div>
+                            <button 
+                                className={`add-to-cart-btn ${isAdding ? 'adding' : ''} ${justAdded ? 'added' : ''}`}
+                                onClick={handleAddToCart}
+                                disabled={isAdding}
+                            >
+                                {isAdding ? 'Adding...' : justAdded ? '✓ Added!' : 'Add to Cart'}
+                            </button>
+                        </>
                     ) : (
                         <div className="portion-selector">
                             <p className="portion-title">Select Portion:</p>
